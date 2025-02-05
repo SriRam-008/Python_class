@@ -18,8 +18,8 @@ class CSK(Resource):
     def delete(self):
         data = request.get_json()
         player = data.get('player')
-        CSK.list.remove(player)  # Simply removes the player (no checks or exception handling)
-        return {"message": f"Player {player} removed successfully!"}, 200
+        CSK.list.remove(player) 
+        return {"message": f"Player {player} removed successfully!"}, 
 
 
 api.add_resource(CSK, '/csk')
